@@ -21,9 +21,24 @@ satellit
 
 ### Prerequisites
 
-- Ubuntu 20.04 or 18.04 or 16.04 LTS
 - Resolution 1920x1080
-- Partially tested on Fedora 28
+
+**Ubuntu** (20.04, 18.04, 16.04 LTS):
+```
+sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev \
+  doxygen libconfig-dev libsdl2-mixer-dev libcunit1-dev graphviz
+```
+
+**macOS** (via [Homebrew](https://brew.sh)):
+```
+brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer libconfig cunit doxygen graphviz
+```
+
+**Fedora** (partially tested):
+```
+sudo yum install SDL2-devel SDL2_image-devel SDL2_ttf-devel \
+  doxygen libconfig-devel SDL2_mixer-devel CUnit-devel
+```
 
 ## Versioning
 

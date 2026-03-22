@@ -1,5 +1,12 @@
 CFLAGS = -Wall -pedantic -Werror -g
 LFLAGS = `sdl2-config --libs` -lSDL2_image -lSDL2_ttf -lm -lconfig
+
+UNAME := $(shell uname)
+ifeq ($(UNAME), Darwin)
+BREW_PREFIX := $(shell brew --prefix 2>/dev/null || echo /usr/local)
+CFLAGS += -I$(BREW_PREFIX)/include
+LFLAGS += -L$(BREW_PREFIX)/lib
+endif
 PROG = satellit
 PROG_TARGET = $(addprefix $(SAT_GIT)/, $(PROG))
 CXX = gcc
