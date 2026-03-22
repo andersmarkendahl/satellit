@@ -42,6 +42,9 @@ enum positionReturnCode {
     POSITION_ERR_VEL,	/**< Faulty Velocity. */
 };
 
+/** Runtime space boundaries — set at startup based on actual screen resolution. */
+extern int space_w_min, space_w_max, space_h_min, space_h_max;
+
 /**
  * @brief Initalize and allocate position.
  * @param x Initial position in X.

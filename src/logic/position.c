@@ -16,8 +16,13 @@
 
 #include "position.h"
 
+int space_w_min = SPACE_W_MIN;
+int space_w_max = SPACE_W_MAX;
+int space_h_min = SPACE_H_MIN;
+int space_h_max = SPACE_H_MAX;
+
 enum positionReturnCode position_validate(double x, double y) {
-	if ((x >= SPACE_W_MIN && x <= SPACE_W_MAX) && (y >= SPACE_H_MIN && y <= SPACE_H_MAX)) {
+	if ((x >= space_w_min && x <= space_w_max) && (y >= space_h_min && y <= space_h_max)) {
 		return POSITION_OK;
 	}
 	return POSITION_ERR_OOB;
