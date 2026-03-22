@@ -28,7 +28,7 @@
  * @return Pointer to audiodevice if passed, NULL if failed.
  *
  */
-SDL_AudioDeviceID * audio_init();
+SDL_AudioDeviceID * audio_init(void);
 
 /**
  * @brief Destroy audio device and structures.

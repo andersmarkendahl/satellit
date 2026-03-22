@@ -16,7 +16,7 @@
 
 #include "audio.h"
 
-SDL_AudioDeviceID * audio_init() {
+SDL_AudioDeviceID * audio_init(void) {
 
 	SDL_AudioSpec want, have;
 	SDL_AudioDeviceID *audiodev;

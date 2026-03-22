@@ -28,7 +28,7 @@ const char* object_enum2str(enum objectReturnCode ret) {
 	}
 }
 
-object_list * object_list_init() {
+object_list * object_list_init(void) {
 	object_list *objl;
 	objl = calloc(1, sizeof(object_list));
 	objl->n_objs = 0;

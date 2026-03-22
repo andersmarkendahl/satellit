@@ -102,7 +102,7 @@ void gfx_screen_destroy(SDL_Window *window, SDL_Renderer *renderer) {
 	SDL_Quit();
 }
 
-gfx_image_list *gfx_image_list_init() {
+gfx_image_list *gfx_image_list_init(void) {
 
 	gfx_image_list *imgl = calloc(1, sizeof(gfx_image_list));
 
