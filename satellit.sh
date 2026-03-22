@@ -13,6 +13,8 @@
 ##	Fedora (only development tested)
 ##		sudo yum install SDL2-devel SDL2_image-devel SDL2_ttf-devel \
 ##		doxygen libconfig-devel SDL2_mixer-devel CUnit-devel
+##	macOS (via Homebrew)
+##		brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer libconfig cunit doxygen graphviz
 ##
 ##	Build Satellit;
 ##
@@ -27,7 +29,12 @@
 ##
 
 prg=$(basename $0)
-dir=$(dirname $0); dir=$(readlink -f $dir)
+dir=$(dirname $0)
+if readlink -f "$dir" > /dev/null 2>&1; then
+	dir=$(readlink -f $dir)
+else
+	dir=$(cd "$dir" && pwd -P)
+fi
 me=$dir/$prg
 tmp=/tmp/${prg}_$$
 sshopt='-q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'

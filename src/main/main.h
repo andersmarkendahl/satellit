@@ -20,6 +20,7 @@
  */
 
 #include "common.h"
+#include "position.h"
 #include "rocket.h"
 #include "planet.h"
 #include "moon.h"

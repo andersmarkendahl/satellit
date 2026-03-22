@@ -93,7 +93,7 @@ void gfx_screen_destroy(SDL_Window *window, SDL_Renderer *renderer);
  * @return Pointer to allocated image list
  *
  */
-gfx_image_list *gfx_image_list_init();
+gfx_image_list *gfx_image_list_init(void);
 
 /**
  * @brief Destroy an image list.

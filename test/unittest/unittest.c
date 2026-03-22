@@ -299,7 +299,7 @@ void test_log(void) {
 
 }
 
-int main()
+int main(void)
 {
 	CU_pSuite pSuite = NULL;
 	unsigned int ret;

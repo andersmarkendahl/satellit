@@ -56,6 +56,12 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
+	/* Set space boundaries based on actual screen resolution (5% margin) */
+	space_w_min = gh->res_w * 0.05;
+	space_w_max = gh->res_w * 0.95;
+	space_h_min = gh->res_h * 0.05;
+	space_h_max = gh->res_h * 0.95;
+
 	/* Initialize images */
 	gh->imgl = gfx_image_list_init();
 	if (gh->imgl == NULL) {

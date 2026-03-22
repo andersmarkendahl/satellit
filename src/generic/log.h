@@ -47,7 +47,7 @@ int log_init(char *log);
  * @return Zero if initilization passed, 1 if failed.
  *
  */
-int log_destroy();
+int log_destroy(void);
 
 #endif
 
