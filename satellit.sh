@@ -29,12 +29,7 @@
 ##
 
 prg=$(basename $0)
-dir=$(dirname $0)
-if readlink -f "$dir" > /dev/null 2>&1; then
-	dir=$(readlink -f $dir)
-else
-	dir=$(cd "$dir" && pwd -P)
-fi
+dir=$(cd "$(dirname $0)" && pwd -P)
 me=$dir/$prg
 tmp=/tmp/${prg}_$$
 sshopt='-q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
